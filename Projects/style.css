@@ -1,25 +1,59 @@
+/* Google Fonts'tan Cardo ve Rubik fontlarını ekleyelim */
 @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+/* Raleway fontunu ekleyelim */
+@import url("http://fonts.googleapis.com/css?family=Raleway");
+
+/* Kök elementimize bazı değişkenler tanımlayalım */
 :root {
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+  --d: 700ms; /* Animasyon süresi */
+  --e: cubic-bezier(0.19, 1, 0.22, 1); /* Animasyon eğrisi */
+  --font-sans: "Rubik", sans-serif; /* Yazı tipi - Rubik */
+  --font-serif: "Cardo", serif; /* Yazı tipi - Cardo */
 }
 
+/* Bütün elementler için kutu modelini düzenleyelim */
 * {
   box-sizing: border-box;
 }
 
+/* HTML ve body elementleri için genel stil */
 html,
 body {
   height: 100%;
+  /* Arka plan rengini gradient olarak ayarlayalım */
+  background: linear-gradient(to bottom, #0094b0, #017ca9, #4b61a0, #6f4e9b, #79479a, #9d2b91, #cb0189, #fb017c);
 }
 
+/* Link stilini düzenleyelim */
+a {
+  color: #fff !important;
+}
+
+/* Navigasyon öğeleri için stil */
+.nav-item {
+  font-family: "Century Gothic"; /* Navigasyon yazı tipi */
+  margin: 0 auto;
+  padding: 0em 3em;
+  text-align: center;
+}
+.nav-item a {
+  color: #FFF;
+  text-decoration: none;
+  font: 20px "Century Gothic";
+  margin: 0px 10px;
+  padding: 20px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+/* Sayfa içeriği için stil */
 body {
   display: grid;
   place-items: center;
 }
 
+/* Sayfa içeriği içindeki kartların stilini düzenleyelim */
 .page-content {
   display: grid;
   grid-gap: 1rem;
@@ -27,18 +61,24 @@ body {
   max-width: 1024px;
   margin: 0 auto;
   font-family: var(--font-sans);
+  margin-top: 50px;
 }
+
+/* Ekran genişliği 600px'den büyükse kartları iki sütuna yerleştirelim */
 @media (min-width: 600px) {
   .page-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Ekran genişliği 800px'den büyükse kartları dört sütuna yerleştirelim */
 @media (min-width: 800px) {
   .page-content {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
+/* Kart öğesi için stil */
 .card {
   position: relative;
   display: flex;
@@ -49,14 +89,20 @@ body {
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
+  /* Kutuyu hafifçe gölgelendirelim */
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
+
+/* Ekran genişliği 600px'den büyükse kart yüksekliğini ayarlayalım */
 @media (min-width: 600px) {
   .card {
     height: 350px;
   }
 }
-.card:before {
+
+/* Kartın önünde ve arkasında arka plan görüntüleri için stiller belirleyelim */
+.card:before,
+.card:after {
   content: "";
   position: absolute;
   top: 0;
@@ -68,19 +114,8 @@ body {
   transition: transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
 }
-.card:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  pointer-events: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
-  transform: translateY(-50%);
-  transition: transform calc(var(--d) * 2) var(--e);
-}
+
+/* Kartların önünde arka plan görüntüleri belirleyelim */
 .card:nth-child(1):before {
   background-image: url(https://user-images.githubusercontent.com/88947242/247974121-44f19444-9c85-4bf0-b595-994424c4cf89.png);
 }
@@ -94,18 +129,19 @@ body {
   background-image: url(https://user-images.githubusercontent.com/88947242/245079639-ab2af879-8a86-439c-ab91-10bd871ea5ed.png);
 }
 .card:nth-child(5):before {
-    background-image: url(#);
-  }
-  .card:nth-child(6):before {
-    background-image: url(#);
-  }
-  .card:nth-child(7):before {
-    background-image: url(#);
-  }
-  .card:nth-child(8):before {
-    background-image: url(#);
-  }
+  background-image: url(#);
+}
+.card:nth-child(6):before {
+  background-image: url(#);
+}
+.card:nth-child(7):before {
+  background-image: url(#);
+}
+.card:nth-child(8):before {
+  background-image: url(#);
+}
 
+/* Kartın altındaki içerik alanı için stil belirleyelim */
 .content {
   position: relative;
   display: flex;
@@ -120,12 +156,14 @@ body {
   margin-top: 1rem;
 }
 
+/* Kart başlığı için stil */
 .title {
   font-size: 1.3rem;
   font-weight: bold;
   line-height: 1.2;
 }
 
+/* Kart içeriği için stil */
 .copy {
   font-family: var(--font-serif);
   font-size: 1.125rem;
@@ -133,49 +171,50 @@ body {
   line-height: 1.35;
 }
 
+/* Düğme stilini düzenleyelim */
 .btn {
-    padding: 1.1em 2em;
-    background: none;
-    border: 2px solid #fff;
-    font-size: 11px;
-    color: #131313;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
-    border-radius: 12px;
-    background-color: #ecd448;
-    font-weight: bolder;
-    box-shadow: 0 2px 0 2px #000;
+  padding: 1.1em 2em;
+  background: none;
+  border: 2px solid #fff;
+  font-size: 11px;
+  color: #131313;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-radius: 12px;
+  background-color: #ecd448;
+  font-weight: bolder;
+  box-shadow: 0 2px 0 2px #000;
 }
 .btn:before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 120%;
-    background-color: #ff6700;
-    top: 50%;
-    transform: skewX(30deg) translate(-150%, -50%);
-    transition: all 0.5s;
-   }
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: #ff6700;
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
 .btn:hover {
-    background-color: #4cc9f0;
-    color: #fff;
-    box-shadow: 0 2px 0 2px #0d3b66;
+  background-color: #4cc9f0;
+  color: #fff;
+  box-shadow: 0 2px 0 2px #0d3b66;
 }
 .btn:hover::before {
-    transform: skewX(30deg) translate(150%, -50%);
-    transition-delay: 0.1s;
-   }
-   .btn:active {
-    transform: scale(0.9);
-   }
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+.btn:active {
+  transform: scale(0.9);
+}
 
+/* Ekran genişliği 600px'den büyükse kartın içeriğini gösterelim */
 @media (hover: hover) and (min-width: 600px) {
   .card:after {
     transform: translateY(0);
   }
-
   .content {
     transform: translateY(calc(100% - 4.5rem));
   }
@@ -184,35 +223,73 @@ body {
     transform: translateY(1rem);
     transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
-
   .card:hover,
-.card:focus-within {
+  .card:focus-within {
     align-items: center;
   }
   .card:hover:before,
-.card:focus-within:before {
+  .card:focus-within:before {
     transform: translateY(-4%);
   }
   .card:hover:after,
-.card:focus-within:after {
+  .card:focus-within:after {
     transform: translateY(-50%);
   }
   .card:hover .content,
-.card:focus-within .content {
+  .card:focus-within .content {
     transform: translateY(0);
   }
   .card:hover .content > *:not(.title),
-.card:focus-within .content > *:not(.title) {
+  .card:focus-within .content > *:not(.title) {
     opacity: 1;
     transform: translateY(0);
     transition-delay: calc(var(--d) / 8);
   }
-
-  .card:focus-within:before, .card:focus-within:after,
-.card:focus-within .content,
-.card:focus-within .content > *:not(.title) {
+  .card:focus-within:before,
+  .card:focus-within:after,
+  .card:focus-within .content,
+  .card:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
+}
 
-  
+/* Dikey kaydırma çubuğu stili */
+::-webkit-scrollbar-thumb {
+  background-color: #FFB6C1;
+}
+
+/* Dikey kaydırma çubuğu arka plan stili */
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+}
+
+/* Dikey kaydırma çubuğu genel stili */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Link üzerine gelindiğinde alt ve üst kenarlara bir çizgi ekleyelim */
+.topBotomBordersOut a:before,
+.topBotomBordersOut a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #FFF;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+.topBotomBordersOut a:before {
+  top: 0px;
+  transform: translateY(10px);
+}
+.topBotomBordersOut a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+.topBotomBordersOut a:hover:before,
+.topBotomBordersOut a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
 }
