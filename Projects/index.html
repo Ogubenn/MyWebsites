@@ -12,24 +12,30 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Custom Styles -->
     <style>
-        .bs-example {
-            margin: 20px;
-        }
+    /* Modal genişliğini %60 yap */
+    .modal-dialog {
+        max-width: 100%;
+    }
 
-        .modal-content iframe {
-            margin: 0 auto;
-            display: block;
-        }
+        /* Modal içerik bölümünü dikdörtgen hale getir */
+    .modal-content {
+        border-radius: 0;
+    }
 
-        /* Customize the modal size */
-        .modal-dialog {
-            max-width: 100%; /* You can adjust this value to make the modal wider */
-        }
+        /* YouTube videosunu sol tarafta ve yazıyı sağ tarafta hizala */
+    .modal-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        /* Optional: Add some padding to the modal body for better layout */
-        .modal-body {
-            padding: 20px;
-        }
+    /* İçerik bölümünde video için yer ayırma */
+    .modal-body iframe {
+            flex: 1;
+            margin-right: 20px;
+    }
+
     </style>
     <!-- Bootstrap 3 CSS (Please note that Bootstrap 3 and Bootstrap 4 are both included, remove the unnecessary one) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -38,40 +44,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="menum navbar navbar-light navbar-expand-md justify-content-center fixed-top">
-        <div class="container">
-            <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
-                <ul class="topBotomBordersOut navbar-nav mx-auto text-center">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="http://ogubenn.com.tr/" target="_blank">Ana Sayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">#</a>
-                    </li>
-                    <!-- Add more navigation items if needed -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar Start -->
+    
+    <!-- Navbar End -->
+
 
     <!-- Main Content -->
     <main class="page-content">
@@ -107,6 +87,15 @@
             <div class="content">
                 <h2 class="title">Game Projects</h2>
                 <p class="copy">2D cyberpunk action platform game.</p>
+                <button class="btn" data-toggle="modal" data-target="#modalGameProjects">Show More</button>
+            </div>
+        </div>
+
+        <!-- #Game -->
+        <div class="card">
+            <div class="content">
+                <h2 class="title">#</h2>
+                <p class="copy">#</p>
                 <button class="btn" data-toggle="modal" data-target="#modalGameProjects">Show More</button>
             </div>
         </div>
