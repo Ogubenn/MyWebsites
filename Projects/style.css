@@ -339,8 +339,8 @@ body {
 }
 .quadrados li i {
     color : rgba(255, 255, 255, 0.15) !important;
-    width: 1200px;
-    height: 1200px;
+    width: 200px;
+    height: 200px;
 }
 
 /* Animasyonlu arka plan öğeleri stilleri */

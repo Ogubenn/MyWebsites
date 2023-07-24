@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" />
     <!-- Bootstrap CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
@@ -44,18 +46,17 @@
 
 <body>
     <!-- Navigation Bar Start -->
-    <!-- Navigation Bar  End  -->
-    <div class="w-100 bg-primary">
-
-    </div>
     
+    <!-- Navigation Bar  End  -->
+
+
     <!-- Animation Lİ Start -->
     <ul class="quadrados">  
         <li class="game">
             <i class="fa-solid fa-gamepad fa-2xl"></i>
         </li>
         <li class="game">
-            <i class="fa-solid fa-gamepad fa-2xl"></i>
+            <i class="fa-solid fa-headset fa-2xl"></i>
         </li>
         <li class="game">
             <i class="fa-regular fa-circle fa-2xl"></i>
@@ -86,10 +87,11 @@
         </li>
         <li class="game">
             <i class="fa-solid fa-dice-five fa-2xl"></i>
-        </li>
-        
+        </li>        
       </ul>
     <!-- Animation Li End   -->
+
+
     <!-- Main Content -->
     <main class="page-content">
         <!-- Jungle Jumper Game Card -->
@@ -120,6 +122,15 @@
         </div>
 
         <!-- Game Projects Card -->
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Game Projects</h2>
+                <p class="copy">2D cyberpunk action platform game.</p>
+                <button class="btn" data-toggle="modal" data-target="#modalGameProjects">Show More</button>
+            </div>
+        </div>
+
+        <!-- # -->
         <div class="card">
             <div class="content">
                 <h2 class="title">Game Projects</h2>
@@ -231,6 +242,39 @@
     </div>
 
     <!-- Game Projects Modal -->
+    <div id="modalGameProjects" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalGameProjectsLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGameProjectsLabel">Game Projects</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Embed the YouTube video here -->
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="1"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Add more details about the Game Projects here if needed -->
+                            <p>My game is a 2D cyberpunk action platform game. Set in a futuristic cityscape, players
+                                take on the role of a cybernetic character battling against evil corporations and
+                                high-tech enemies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- # Modal -->
     <div id="modalGameProjects" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalGameProjectsLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
