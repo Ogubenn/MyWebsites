@@ -327,9 +327,34 @@ body {
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
 }
+.quadrados .game {
+    position: absolute;
+    display: block;
+    background-color: transparent !important;
+    bottom: -100px;
+    -webkit-animation: square 5s infinite;
+    animation: square 8s infinite;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+.quadrados li i {
+    color : rgba(255, 255, 255, 0.15) !important;
+    width: 1200px;
+    height: 1200px;
+}
 
 /* Animasyonlu arka plan öğeleri stilleri */
+.quadrados .game{
+    width: 80px;
+    height: 80px;
+    left: 30%;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 17s;
+    animation-duration: 12s;
+}
 .quadrados li:nth-child(1) {
+
     width: 40px;
     height: 40px;
     left: 20%;
