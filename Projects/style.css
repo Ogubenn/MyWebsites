@@ -338,7 +338,7 @@ body {
     transition-timing-function: linear;
 }
 .quadrados li i {
-    color : rgba(255, 255, 255, 0.15) !important;
+    color : rgba(255, 255, 255, 0.774) !important;
     width: 200px;
     height: 200px;
 }
