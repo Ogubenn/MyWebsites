@@ -8,7 +8,7 @@
     <meta name="author" content="Oğulcan Durkan">
     <meta property="og:title" content="Oğulcan Durkan | 42 Kocaeli Yazılım Okulu ve SoftITO Bilişim Akademisi ve Oyun Geliştirici">
     <meta property="og:description" content="Oğulcan Durkan, 22 yaşında olan bir öğrenciyim. 42 Kocaeli Yazılım Okulu'nda öğrenim görüyor ve SoftITO Yazılım Bilişim Akademisi'nde öğrenciyim.Yazılım bilgi ve becerilerimi geliştirmek için 42 Kocaeli'nin nitelikli eğitim kadrosu ve güncel müfredatı benim için ideal bir ortam sağlıyor.SoftITO eğitim Bilişim Akademisi'nde C# ve Unity alanlarında değerli tecrübeler edindim.">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/88947242?v=4">
+    <meta property="og:image" content="https://ogubenn.com.tr/img/ProfileFoto.png">
     <meta property="og:url" content="https://ogubenn.com.tr/">
     <meta property="og:type" content="website">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -22,6 +22,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="css2.css?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -34,6 +35,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css?v=123" rel="stylesheet">
+    <link rel="stylesheet" href="button.css?v=321">
+    <link rel="stylesheet" href="modal.css?v=356">
     <!-- update the version number as needed -->
     <script defer="" src="__/firebase/9.15.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -279,44 +282,93 @@
                             <div class="owl-carousel custom-carousel owl-theme">
                               <div class="item active" style="background-image: url(https://user-images.githubusercontent.com/88947242/247974121-44f19444-9c85-4bf0-b595-994424c4cf89.png);">
                                 <div class="item-desc">
-                                  <h3>Jungle Jumper Game</h3>
-                                  <p>My game is an endless runner game.</p>
+                                    <h3>Jungle Jumper Game</h3>
+                                        <p>My game is an endless runner game.</p>
+                                            <button class="custom-btn btn-1" data-toggle="modal" data-target="#largeModal"><span>Read More</span></button>
                                 </div>
                               </div>
                               <div class="item" style="background-image: url(https://user-images.githubusercontent.com/88947242/238763443-33b4dd29-7f8e-4680-a390-a1641983a4ea.png);">
                                 <div class="item-desc">
                                   <h3>ZigZag Game</h3>
                                   <p>My game is an endless physics-based single-player game.</p>
+                                            <button class="custom-btn btn-2"><span>Read More</span></button>
                                 </div>
                               </div>
                               <div class="item" style="background-image: url(https://user-images.githubusercontent.com/88947242/238762734-ae40135f-6093-45fb-8d61-3bb58be0fabd.png);">
                                 <div class="item-desc">
-                                  <h3>Pixel Adventure Game</h3>
+                                  <h3>Pixel Adventure</h3>
                                   <p>2D action platform game.</p>
+                                            <button class="custom-btn btn-3"><span>Read More</span></button>
                                 </div>
                               </div>
                               <div class="item" style="background-image: url(https://user-images.githubusercontent.com/88947242/260689523-8afc04de-eed8-4894-8b74-5b7a64f8dbe1.png);">
                                 <div class="item-desc">
                                   <h3>So Long</h3>
                                   <p>This project is a very small 2D game. Its purpose is to learn about textures, sprites, and some basic gameplay algorithms.</p>
-                                </div>
-                              </div>
-                              <div class="item" style="background-image: url(#);">
-                                <div class="item-desc">
-                                  <h3>#</h3>
-                                  <p>#</p>
-                                </div>
-                              </div>
-                              <div class="item" style="background-image: url(#);">
-                                <div class="item-desc">
-                                  <h3>#</h3>
-                                  <p>#</p>
+                                            <button class="custom-btn btn-2"><span>Read More</span></button>
                                 </div>
                               </div>
                             </div>
                             </div>
                           </section>
     <!-- Projects End   -->
+
+    <!-- Modal Start   -->
+    <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">JUNGLE JUMPER GAME</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Sol Tarafta YouTube Videosu -->
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+
+
+                            <img src="img/JungleJumper.png" height="315" width="172" alt="Resim Açıklaması">
+                            <img src="img/JungleJumper.png" height="315"  width="172" alt="Resim Açıklaması">
+                            <img src="img/JungleJumper.png" height="315"  width="172" alt="Resim Açıklaması">
+                            <img src="img/JungleJumper.png" height="315" width="172"  alt="Resim Açıklaması">
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Sağ Tarafta Başlık ve Yazı -->
+                            <p>
+                                    My game is an endless runner game. It features a jungle-themed environment where the player controls a character who runs and jumps to avoid obstacles and collect power-ups.
+
+                                    <h4>Game Type and Theme</h4>
+
+                                    The game is of the endless runner genre, where players continually progress through a level without aiming for a specific endpoint.
+                                    The game is set in a jungle-themed environment, creating the primary atmosphere of the game. It includes elements like dense greenery, tropical plants, towering trees, and exotic locations.
+                                    <h4>Main Character</h4>
+
+                                    The player takes control of the main character in the game. Typically, this character is an adventurer, explorer, or someone striving to survive in the jungle.
+                                    The character possesses running and jumping abilities, which the player uses to navigate the game, leaping over obstacles and collecting power-ups.
+                                    <h4>Obstacles</h4>
+
+                                    As players journey through the game, they encounter various obstacles. These obstacles can make progress challenging, slow down momentum, or even lead to the player's failure.
+                                    Examples of obstacles include rocks, bushes, deep chasms, fast-flowing rivers, and other natural hazards.
+                                    <h4>Power-Ups</h4>
+
+                                    To enrich the gaming experience, the game incorporates power-ups that players can collect. These power-ups are designed to make the player's progress easier or enhance their score.
+                                    Some common power-ups include speed boosters, invincibility shields, double jumps, and score multipliers.
+                                    This endless runner game immerses players in an exhilarating jungle adventure, where quick reflexes and strategic use of power-ups are essential for success.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End   -->
+    
 
     <!-- Contact Start -->
     <div class="container-fluid py-5" id="contact">
